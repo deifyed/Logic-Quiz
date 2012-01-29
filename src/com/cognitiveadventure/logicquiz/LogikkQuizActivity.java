@@ -25,8 +25,12 @@ public class LogikkQuizActivity extends Activity implements OnClickListener {
         setContentView(R.layout.main);
         
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        
-        loadScoreboard();
+    }
+    
+    @Override
+    protected void onResume() {
+    	loadScoreboard();
+    	super.onResume();
     }
     
     public void onClick(View v)
