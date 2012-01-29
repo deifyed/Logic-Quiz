@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Logikk Quiz</string>
+    <string name="btnNewGame">Nytt spill</string>
+    <string name="scoreboard">Top 5</string>
+    
+    <!-- In-game -->
+    <string name="NewGameDialogTitle">Nytt spill!</string>
+    <string name="NewGameDialogMessage">Vil du starte et nytt spill?</string>
+    <string name="NewGameDialogPlayButton">Spill</string>
+    <string name="NewGameDialogCancelButton">Avbryt</string>
+    <string name="EndGameDialogTitle">Ferdig!</string>
+    <string name="EndGameDialogMessage">Gratulerer! Du fikk </string>
+    <string name="initialcounter">01:00</string>
+
+</resources>

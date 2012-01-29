@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/gameLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <ImageView 
+    android:id="@+id/imgCase"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white" />
+    
+    <TextView 
+    android:id="@+id/lblCountDown" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:padding="20dp"
+    android:textSize="20dp"
+    android:text="@string/initialcounter" />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        
+    <TextView 
+        android:id="@+id/btnLeft" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:onClick="onClick" />
+    
+    <TextView
+        android:id="@+id/btnRight"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:onClick="onClick" />
+    </LinearLayout>
+
+
+</RelativeLayout>
