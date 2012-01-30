@@ -8,8 +8,7 @@
     android:id="@+id/imgCase"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@android:color/white"
-    android:contentDescription="" />
+    android:background="@android:color/white" />
     
     <TextView 
     android:id="@+id/lblCountDown" 
