@@ -185,7 +185,7 @@ public class GameActivity extends Activity implements OnClickListener {
     	SharedPreferences prefs = getSharedPreferences(LogikkQuizActivity.PREFS, 0);
     	for(int i = 1; i < 6; i++)
     		if(score > prefs.getInt(LogikkQuizActivity.KEY_PREFIX + i, 0)) {
-    			prefs.edit().putInt(LogikkQuizActivity.KEY_PREFIX + 1, score).commit();
+    			prefs.edit().putInt(LogikkQuizActivity.KEY_PREFIX + i, score).commit();
     			break;
     		}
     }

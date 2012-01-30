@@ -8,5 +8,5 @@ public class Case {
 	{
 		this.path = path;
 		answer = path.contains("true");
-	}
+	} 
 }

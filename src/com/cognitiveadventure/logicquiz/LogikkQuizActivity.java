@@ -56,6 +56,6 @@ public class LogikkQuizActivity extends Activity implements OnClickListener {
     private void loadScoreboard() {
     	SharedPreferences prefs = getSharedPreferences(PREFS, 0);
     	for(int i = 1; i < 6; i++)
-    		((EditText) findViewById(R.id.scoreBoard)).append("\n" + i + ": " + prefs.getInt(KEY_PREFIX + i, 0));
+    		((EditText) findViewById(R.id.scoreBoard)).append("\n" + i + ": " + ((prefs.getInt(KEY_PREFIX + i, 0) != 0) ? prefs.getInt(KEY_PREFIX + i, 0) : ""));
     }
 }
