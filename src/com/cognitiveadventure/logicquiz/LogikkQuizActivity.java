@@ -1,4 +1,4 @@
-package com.cognitiveadventure.logicquiz;
+	package com.cognitiveadventure.logicquiz;
 
 import android.app.Activity;
 import android.content.Intent;
