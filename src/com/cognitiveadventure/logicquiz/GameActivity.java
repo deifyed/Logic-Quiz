@@ -10,7 +10,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -52,6 +51,14 @@ public class GameActivity extends Activity implements OnClickListener {
         newGameDialog();
     }
     
+    @Override
+    public void onBackPressed() {
+
+    	tmr.cancel();
+    	
+    	super.onBackPressed();
+    }
+    
 	public void onClick(View v) {
 		if(v.getId() == R.id.btnLeft && currentCase.answer == true)
 			correct();
@@ -85,7 +92,6 @@ public class GameActivity extends Activity implements OnClickListener {
 			@Override
 			public void onFinish() {
 				lblCountDown.setText("00:00");
-				updateScore(score);
 				endGameDialog();
 			}
 		};
@@ -179,15 +185,6 @@ public class GameActivity extends Activity implements OnClickListener {
     	score = 0;
     	
     	populate();
-    }
-    
-    private void updateScore(int newScore) {
-    	SharedPreferences prefs = getSharedPreferences(LogikkQuizActivity.PREFS, 0);
-    	for(int i = 1; i < 6; i++)
-    		if(score > prefs.getInt(LogikkQuizActivity.KEY_PREFIX + i, 0)) {
-    			prefs.edit().putInt(LogikkQuizActivity.KEY_PREFIX + i, score).commit();
-    			break;
-    		}
     }
     
     /*

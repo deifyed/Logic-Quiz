@@ -2,12 +2,10 @@
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.EditText;
 
 /*
  * TODO:
@@ -25,11 +23,12 @@ public class LogikkQuizActivity extends Activity implements OnClickListener {
         setContentView(R.layout.main);
         
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        
+        newGame();
     }
     
     @Override
     protected void onResume() {
-    	loadScoreboard();
     	super.onResume();
     }
     
@@ -51,11 +50,5 @@ public class LogikkQuizActivity extends Activity implements OnClickListener {
     	Intent i = new Intent(this, GameActivity.class);
     	
     	startActivity(i);
-    }
-    
-    private void loadScoreboard() {
-    	SharedPreferences prefs = getSharedPreferences(PREFS, 0);
-    	for(int i = 1; i < 6; i++)
-    		((EditText) findViewById(R.id.scoreBoard)).append("\n" + i + ": " + ((prefs.getInt(KEY_PREFIX + i, 0) != 0) ? prefs.getInt(KEY_PREFIX + i, 0) : ""));
     }
 }

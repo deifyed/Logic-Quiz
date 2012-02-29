@@ -4,29 +4,33 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
     
-    <EditText 
-        android:id="@+id/scoreBoard"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="top"
-        android:inputType="textMultiLine"
-        android:maxLines="6" 
-        android:focusable="false"
-        android:text="@string/scoreboard" />
-    
-        <TextView 
+<!--        <TextView 
         android:id="@+id/btnNewGame"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" 
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/scoreBoard"
+        android:layout_height="48dip" 
+        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
         android:padding="8dp"
-        
         android:text="@string/btnNewGame"
         android:typeface="sans"
         android:clickable="true"
+        android:onClick="onClick" /> -->
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="48dip"
+            android:src="@drawable/launcher"/>
+        
+        <Button 
+		android:id="@+id/btnNewGame"
+        android:layout_width="128dip"
+        android:layout_height="48dip" 
+        android:background="@drawable/launcher"
+        android:layout_centerInParent="true"
+        android:text="@string/btnNewGame"
+        android:typeface="sans"
         android:onClick="onClick" />
 
 </RelativeLayout>
